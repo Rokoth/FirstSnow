@@ -12,6 +12,8 @@ namespace DataBaseEngine.Model
         public string Name { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
+        public object Active { get; internal set; }
+        public object Deleted { get; internal set; }
     }
 
     [TableName("settings")]
