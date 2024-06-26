@@ -1,12 +1,12 @@
 ﻿namespace FirstSnow.Contract.Models
 {
-    public class Response<T>
+    public class Response<T> where T: class
     {
-        public T Value { get; private set; }
+        public T? Value { get; private set; }
 
         public bool IsSuccess { get; private set; }
 
-        public string Message { get; private set; }
+        public string? Message { get; private set; }
 
         public static Response<T> Ok(T value)
         {
