@@ -1,6 +1,6 @@
 ﻿using DataBaseEngine.Abstract;
 using DataBaseEngine.Model;
-
+using FirstSnow.Contract.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
@@ -22,7 +22,7 @@ namespace DataBaseEngine.Repositories
         /// <param name="filter">filter</param>
         /// <param name="token">token</param>
         /// <returns>PagedResult<T></returns>
-        Task<FirstSnow.Contract.Model.PagedResult<T>> GetAsync(Filter<T> filter, CancellationToken token);
+        Task<PagedResult<T>> GetAsync(Filter<T> filter, CancellationToken token);
 
         /// <summary>
         /// Get model list with paging with deleted
@@ -30,7 +30,7 @@ namespace DataBaseEngine.Repositories
         /// <param name="filter">filter</param>
         /// <param name="token">token</param>
         /// <returns>PagedResult<T></returns>
-        Task<FirstSnow.Contract.Model.PagedResult<T>> GetAsyncDeleted(Filter<T> filter, CancellationToken token);
+        Task<PagedResult<T>> GetAsyncDeleted(Filter<T> filter, CancellationToken token);
 
         /// <summary>
         /// Get item of model by id

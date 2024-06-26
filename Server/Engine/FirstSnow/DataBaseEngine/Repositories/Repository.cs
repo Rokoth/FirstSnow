@@ -11,6 +11,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
+using FirstSnow.Contract.Models;
 
 namespace DataBaseEngine.Repositories
 {
@@ -72,7 +73,7 @@ namespace DataBaseEngine.Repositories
         /// <param name="filter">фильтр</param>
         /// <param name="token">токен</param>
         /// <returns>список моделей</returns>
-        public async Task<FirstSnow.Contract.Model.PagedResult<T>> GetAsync(Filter<T> filter, CancellationToken token)
+        public async Task<FirstSnow.Contract.Models.PagedResult<T>> GetAsync(Filter<T> filter, CancellationToken token)
         {
             return await GetAsyncInternal(filter, false, "GetAsync");
         }
@@ -83,12 +84,12 @@ namespace DataBaseEngine.Repositories
         /// <param name="filter">фильтр</param>
         /// <param name="token">токен</param>
         /// <returns>список моделей</returns>
-        public async Task<FirstSnow.Contract.Model.PagedResult<T>> GetAsyncDeleted(Filter<T> filter, CancellationToken token)
+        public async Task<FirstSnow.Contract.Models.PagedResult<T>> GetAsyncDeleted(Filter<T> filter, CancellationToken token)
         {
             return await GetAsyncInternal(filter, true, "GetAsyncDeleted");
         }
 
-        private async Task<FirstSnow.Contract.Model.PagedResult<T>> GetAsyncInternal(Filter<T> filter, bool withDeleted, string methodName)
+        private async Task<FirstSnow.Contract.Models.PagedResult<T>> GetAsyncInternal(Filter<T> filter, bool withDeleted, string methodName)
         {
             return await ExecuteAsync(async (context) =>
             {

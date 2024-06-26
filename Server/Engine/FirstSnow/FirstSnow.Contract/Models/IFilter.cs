@@ -1,4 +1,4 @@
-﻿namespace FirstSnow.Contract.Model
+﻿namespace FirstSnow.Contract.Models
 {
     /// <summary>
     /// Обобщенный интерфейс классов фильтра

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace FirstSnow.Contract.Model
+namespace FirstSnow.Contract.Models
 {
     /// <summary>
     /// Базовый класс

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
-namespace FirstSnow.Contract.Model
+namespace FirstSnow.Contract.Models
 {
     public class User : Entity
     {
@@ -10,7 +10,7 @@ namespace FirstSnow.Contract.Model
         [Remote("CheckName", "User", ErrorMessage = "Имя уже используется")]
         public string Name { get; set; }
 
-        [Display(Name = "Описание")]       
+        [Display(Name = "Описание")]
         public string Description { get; set; }
 
         [Display(Name = "Логин")]
@@ -34,6 +34,6 @@ namespace FirstSnow.Contract.Model
         [Display(Name = "Период добавления элементов в резервы")]
         [Required(ErrorMessage = "Поле должно быть установлено")]
         public int AddPeriod { get; set; }
-        
-    }    
+
+    }
 }

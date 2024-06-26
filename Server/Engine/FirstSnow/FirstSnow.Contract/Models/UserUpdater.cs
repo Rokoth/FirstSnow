@@ -1,9 +1,9 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace FirstSnow.Contract.Model
+namespace FirstSnow.Contract.Models
 {
-    public class UserUpdater: IEntity
+    public class UserUpdater : IEntity
     {
         public Guid Id { get; set; }
         [Display(Name = "Имя")]
@@ -25,12 +25,12 @@ namespace FirstSnow.Contract.Model
 
         [Display(Name = "Формула")]
         [Required(ErrorMessage = "Поле должно быть установлено")]
-        public string Formula { get; set; }       
-        
+        public string Formula { get; set; }
+
         [Display(Name = "Только листовые элементы")]
         [Required(ErrorMessage = "Поле должно быть установлено")]
         public bool LeafOnly { get; set; }
-       
+
         [Display(Name = "Величина резерва по умолчанию")]
         [Required(ErrorMessage = "Поле должно быть установлено")]
         public decimal DefaultReserveValue { get; set; }

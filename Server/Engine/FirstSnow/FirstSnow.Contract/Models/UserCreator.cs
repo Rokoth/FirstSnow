@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace FirstSnow.Contract.Model
+namespace FirstSnow.Contract.Models
 {
     /// <summary>
     /// User Creator model
@@ -49,5 +49,5 @@ namespace FirstSnow.Contract.Model
         public bool LeafOnly { get; set; }
         [Display(Name = "Период добавления элементов в резервы")]
         public int AddPeriod { get; set; }
-    }    
+    }
 }
